@@ -1,0 +1,39 @@
+->
+	?
+		(At Flight Altitude)
+		(At Home)
+		<!>		
+			(In Fly Zone)
+		->
+			[Takeoff]
+	->	
+		?
+			(Visited Destination)
+			(In No Fly Zone)
+			[Go to Destination]
+	->
+		?
+			<!>
+				(In No Fly Zone)
+			[Land]
+		?
+			<!>
+				(On Ground)
+			(Visited Destination)
+			(In Fly Zone)
+			[Go to Destination]
+		?
+			<!>
+				(On Ground)
+			(In Fly Zone)
+			[Go Home]
+	->
+		?
+			(At Home)
+			(In No Fly Zone)
+			[Go Home]
+	->
+		?
+			(On Ground)
+			[Land]
+
